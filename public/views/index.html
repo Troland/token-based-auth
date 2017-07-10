@@ -50,6 +50,7 @@
       $('#J_query').on('click', function (e) {
         $.post('/api/orders', function (res) {
           $('#J_result').html(res.count)
+          alert(res.count)
         }).fail(function (xhr, textStatus, errorThrown) {
           if (xhr.status === 401) {
             alert('未授权，请重新登录')
